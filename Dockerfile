@@ -1,5 +1,5 @@
 FROM freeradius/freeradius-server:latest
-RUN rm \
+RUN rm -rf \
 	/etc/raddb/sites-enabled/* \
     /etc/raddb/mods-enabled/* \
     /etc/raddb/certs/*
