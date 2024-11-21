@@ -1,4 +1,4 @@
-FROM freeradius/freeradius-server:latest
+FROM freeradius/freeradius-server:latest-3.2
 RUN rm -rf \
 	/etc/raddb/sites-enabled/* \
     /etc/raddb/mods-enabled/* \
