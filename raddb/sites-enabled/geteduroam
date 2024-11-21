@@ -11,6 +11,11 @@ server geteduroam {
 	authorize {
 		filter_username
 
+		split_username_nai
+		if (noop || !&Stripped-User-Domain) {
+			reject
+		}
+
 		#preprocess
 
 		# if you want detailed logging

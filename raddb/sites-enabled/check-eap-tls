@@ -1,0 +1,16 @@
+server check-eap-tls {
+  authorize {
+    if (&TLS-Client-Cert-Common-Name =~ /\@(.*)$/) {
+      if (&Stripped-User-Domain == "%{1}") {
+        update config {
+          Auth-Type = Accept
+        }
+      }
+      else {
+        update config {
+          Auth-Type = Reject
+        }
+      }
+    }
+  }
+}
