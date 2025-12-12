@@ -19,7 +19,7 @@ server geteduroam {
 		#preprocess
 
 		# if you want detailed logging
-		auth_log
+		#auth_log
 		#suffix
 
 		# Needed for EAP-TLS
@@ -35,7 +35,7 @@ server geteduroam {
 
 	post-auth {
 		# Log all replies we send
-		reply_log
+		#reply_log
 		# Only log some replies we send
 		#Post-Auth-Type REJECT {
 		#	reply_log
